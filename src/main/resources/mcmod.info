@@ -1,0 +1,16 @@
+[
+  {
+  "modid": "kisman",
+  "name": "kisman.cc+",
+  "description": "The Very Best Minecraft Pvp and Pve client by _kisman_ & muffi & PunCakeCat & Skarlord99",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "https://discord.gg/CJMhy74NYF",
+  "updateUrl": "",
+  "authorList": ["_kisman_", "PunCakeCat", "BigJMuffin", "Skarlord99"],
+  "credits": [",_kisman_#5039", "! BigJMuffin#6215", "PunCakeCat#4572", "Skarlord99#5871"],
+  "logoFile": "assets/kismancc/banner.png",
+  "screenshots": [],
+  "dependencies": []
+  }
+]
