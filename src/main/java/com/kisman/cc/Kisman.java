@@ -140,7 +140,6 @@ public class Kisman {
         aiImpr = new MainAiImpr();
 
         eventProcessor = new EventProcessor();
-        eventProcessor.onInit();
 
         mc = Minecraft.getMinecraft();
 
