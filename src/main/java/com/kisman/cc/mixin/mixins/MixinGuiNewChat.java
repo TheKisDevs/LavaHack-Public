@@ -82,7 +82,7 @@ public class MixinGuiNewChat {
         }
         ChatModifier chatModifier = (ChatModifier) Kisman.instance.moduleManager.getModule("ChatModifier");
         if(chatModifier.isToggled() && chatModifier.getTtf().getValBoolean()) return CustomFontUtil.drawStringWithShadow(text, x, newY, color);
-        return fontRenderer.drawStringWithShadow(text, x, newY, color);
+        return fontRenderer.drawStringWithShadow(text, x, ((chatModifier.isToggled() && chatModifier.getAnimation().getValBoolean()) ? newY : y), color);
     }
 
     @Inject(method = "printChatMessageWithOptionalDeletion", at = @At("HEAD"))
