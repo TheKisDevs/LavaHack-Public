@@ -98,61 +98,9 @@ public class MixinGuiContainer extends GuiScreen {
             if(itemESP.getGuiTextField().isFocused()) ci.cancel();
         }
     }
-
-    /**
-     * @author _kisman_
-     */
-    @Overwrite
-    private void drawSlot(Slot slotIn) {
-        int i = slotIn.xPos;
-        int j = slotIn.yPos;
-        ItemStack itemstack = slotIn.getStack();
-        boolean flag = false;
-        boolean flag1 = slotIn == clickedSlot && !this.draggedStack.isEmpty() && !isRightMouseClick;
-        ItemStack itemstack1 = this.mc.player.inventory.getItemStack();
-        String s = null;
-        if (slotIn == this.clickedSlot && !this.draggedStack.isEmpty() && this.isRightMouseClick && !itemstack.isEmpty()) {
-            itemstack = itemstack.copy();
-            itemstack.setCount(itemstack.getCount() / 2);
-        } else if (dragSplitting && dragSplittingSlots.contains(slotIn) && !itemstack1.isEmpty()) {
-            if (this.dragSplittingSlots.size() == 1) return;
-            if (Container.canAddItemToSlot(slotIn, itemstack1, true) && this.inventorySlots.canDragIntoSlot(slotIn)) {
-                itemstack = itemstack1.copy();
-                flag = true;
-                Container.computeStackSize(this.dragSplittingSlots, dragSplittingLimit, itemstack, slotIn.getStack().isEmpty() ? 0 : slotIn.getStack().getCount());
-                int k = Math.min(itemstack.getMaxStackSize(), slotIn.getItemStackLimit(itemstack));
-                if (itemstack.getCount() > k) {
-                    s = TextFormatting.YELLOW.toString() + k;
-                    itemstack.setCount(k);
-                }
-            } else {
-                this.dragSplittingSlots.remove(slotIn);
-                updateDragSplitting();
-            }
-        }
-
-        this.zLevel = 100.0F;
-        this.itemRender.zLevel = 100.0F;
-        if (itemstack.isEmpty() && slotIn.isEnabled()) {
-            TextureAtlasSprite textureatlassprite = slotIn.getBackgroundSprite();
-            if (textureatlassprite != null) {
-                GlStateManager.disableLighting();
-                this.mc.getTextureManager().bindTexture(slotIn.getBackgroundLocation());
-                this.drawTexturedModalRect(i, j, textureatlassprite, 16, 16);
-                GlStateManager.enableLighting();
-                flag1 = true;
-            }
-        }
-
-        if (!flag1) {
-            if (flag) drawRect(i, j, i + 16, j + 16, -2130706433);
-            if(ContainerModifier.instance.isToggled() && ContainerModifier.instance.itemESP.getValBoolean() && !itemESP.getItemStacks().isEmpty() && itemESP.getItemStacks().contains(slotIn.getStack())) drawRect(i, j, i + 16, j + 16, ColorUtils.astolfoColors(100, 100));
-            GlStateManager.enableDepth();
-            this.itemRender.renderItemAndEffectIntoGUI(this.mc.player, itemstack, i, j);
-            this.itemRender.renderItemOverlayIntoGUI(this.fontRenderer, itemstack, i, j, s);
-        }
-
-        this.itemRender.zLevel = 0.0F;
-        this.zLevel = 0.0F;
+    
+    @Inject(method = "drawSlot", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/renderer/GlStateManager;enableDepth()V"))
+    private void drawSlotHook(Slot slot, CallbackInfo ci) {
+        if(ContainerModifier.instance.isToggled() && ContainerModifier.instance.itemESP.getValBoolean() && !itemESP.getItemStacks().isEmpty() && itemESP.getItemStacks().contains(slot.getStack())) drawRect(slot.xPos, slot.yPos, slot.xPos + 16, slot.yPos + 16, ColorUtils.astolfoColors(100, 100));
     }
 }
