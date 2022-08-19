@@ -52,12 +52,10 @@ public class ModuleManager {
 		modules.add(new AutoClicker());
 		modules.add(new AutoFirework());
 		//modules.add(new AutoObsidian());
-		modules.add(new JesusPlus());
 		modules.add(new AutoPot());
 		modules.add(new AutoRer());
 		modules.add(new AutoTotem());
 		modules.add(new AutoTrap());
-		modules.add(new AntiTrapDoorBurrow());
 		modules.add(new BowAimBot());
 		modules.add(new BowSpam());
 		modules.add(new BreakAlert());
@@ -148,6 +146,7 @@ public class ModuleManager {
 		modules.add(new HoleSnap());
 		modules.add(new IceSpeed());
 		modules.add(new Jesus());
+		modules.add(new JesusPlus());
 		modules.add(new LongJump());
 		modules.add(new NoFall());
 		modules.add(new NoJumpDelay());
