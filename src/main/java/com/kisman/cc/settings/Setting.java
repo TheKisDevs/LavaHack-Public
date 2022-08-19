@@ -45,7 +45,7 @@ public class Setting {
 	private ArrayList<String> options;
 	private Enum optionEnum;
 	
-	private boolean bval;
+	public boolean bval;
 	private boolean rainbow;
 	private boolean syns;
 	private boolean hud = false;
@@ -55,7 +55,7 @@ public class Setting {
 	private boolean minus;
 	private boolean enumCombo = false;
 
-	private double dval;
+	public double dval;
 	private double min;
 	private double max;
 

@@ -6,6 +6,8 @@ import com.kisman.cc.settings.Setting;
 import com.kisman.cc.util.Colour;
 import net.minecraft.util.ResourceLocation;
 
+import static org.lwjgl.input.Keyboard.KEY_RSHIFT;
+
 public class GuiModule extends Module {
     public final Setting primaryColor = new Setting("Primary Color", this, "Primary Color", new Colour(255, 0, 0));
     public final Setting background = new Setting("Background", this, true);
@@ -18,8 +20,11 @@ public class GuiModule extends Module {
 
     public GuiModule() {
         super("Gui", Category.CLIENT);
+        super.setKey(KEY_RSHIFT);
+
 
         instance = this;
+
 
         setmgr.rSetting(primaryColor);
         setmgr.rSetting(background);
@@ -27,6 +32,7 @@ public class GuiModule extends Module {
         setmgr.rSetting(test);
         setmgr.rSetting(shadowRects);
         setmgr.rSetting(line);
+
     }
 
     public void onEnable() {

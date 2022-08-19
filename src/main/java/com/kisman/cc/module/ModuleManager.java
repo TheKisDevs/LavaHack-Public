@@ -52,6 +52,7 @@ public class ModuleManager {
 		modules.add(new AutoClicker());
 		modules.add(new AutoFirework());
 		//modules.add(new AutoObsidian());
+		modules.add(new JesusPlus());
 		modules.add(new AutoPot());
 		modules.add(new AutoRer());
 		modules.add(new AutoTotem());
