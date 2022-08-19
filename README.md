@@ -1,4 +1,9 @@
 # LavaHack-Public
+
+_KotoPushka_#9042 is developer of public version 
+
+
+
 Public(leaked) version of LavaHack(kisman.cc)
 
 Date of the leak is 05-01-2022
@@ -7,7 +12,7 @@ Date of the leak is 05-01-2022
 
 Дата слива 05-01-2022
 
-На 25 старов рассказываю историю того как он(панкейк) мною шантажировал!!!
+На 30 старов рассказываю историю того как он(панкейк) мною шантажировал!!!
 
 
 История лика:
