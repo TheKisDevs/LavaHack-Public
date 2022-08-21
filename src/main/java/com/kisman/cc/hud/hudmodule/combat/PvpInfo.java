@@ -40,8 +40,6 @@ public class PvpInfo extends HudModule {
         count++;
         CustomFontUtil.drawStringWithShadow(TextFormatting.GRAY + "CF: " + (isToggled(CrystalFiller.instance) ? TextFormatting.GREEN + "ON" : TextFormatting.RED + "OFF"), getX(), count * height + y, -1);
         count++;
-        CustomFontUtil.drawStringWithShadow(TextFormatting.GRAY + "ATDB: " + (isToggled(AntiTrapDoorBurrow.instance) ? TextFormatting.GREEN + "ON" : TextFormatting.RED + "OFF"), getX(), count * height + y, -1);
-        count++;
         CustomFontUtil.drawStringWithShadow(TextFormatting.GRAY + "Speed: " + (isToggled(Speed.instance) ? TextFormatting.GREEN + "ON" : TextFormatting.RED + "OFF"), getX(), count * height + y, -1);
         count++;
 
