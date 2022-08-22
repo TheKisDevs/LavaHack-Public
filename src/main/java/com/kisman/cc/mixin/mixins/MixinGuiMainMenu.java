@@ -19,7 +19,7 @@ public class MixinGuiMainMenu extends GuiScreen {
     @Inject(method = "initGui", at = @At("RETURN"))
     private void init(CallbackInfo ci) {
         int j = this.height / 4 + 48;
-        buttonList.add(new GuiButton(893, width / 2 - 100, j + 72 + 12 + 24, "kisman.cc"));
+        buttonList.add(new GuiButton(893, width / 2 - 100, j + 72 + 12 + 24, "LavaHack Public"));
         particleSystem = new ParticleSystem(300);
         customSplashSrt = CustomMainMenu.getRandomCustomSplash();
     }
