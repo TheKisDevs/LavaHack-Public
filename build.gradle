@@ -6,7 +6,7 @@ buildscript {
         mavenCentral()
         jcenter()
         maven {
-            url = "http://files.minecraftforge.net/maven"//https://repo.spongepowered.org/repository/maven-public/
+            url = "http://files.minecraftforge.net/maven"
         }
         maven {
             name = 'gradle plugins'
@@ -25,9 +25,7 @@ buildscript {
         classpath 'net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT'
         classpath 'org.spongepowered:mixingradle:0.4-SNAPSHOT'
         classpath 'com.github.jengelman.gradle.plugins:shadow:1.2.3'
-        classpath 'net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT'
         classpath 'com.google.code.gson:gson:2.8.6'
-        classpath 'gradle.plugin.com.matthewprenger:CurseGradle:1.0.9'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
@@ -36,13 +34,12 @@ apply plugin: 'kotlin'
 apply plugin: 'com.github.johnrengelman.shadow'
 apply plugin: 'net.minecraftforge.gradle.forge'
 apply plugin: 'org.spongepowered.mixin'
-apply plugin: 'com.matthewprenger.cursegradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = 'b0.1.6.5-plus'
+version = 'b0.1.6.5-1'
 group = 'com.kisman.cc'
-archivesBaseName = 'kisman.cc'
+archivesBaseName = 'LavaHack-Public'
 
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
 
@@ -97,8 +94,6 @@ dependencies {
         exclude module: 'gson'
         exclude module: 'commons-io'
     }
-    compile('com.lukflug:panelstudio:0.1.8')
-    compile('com.lukflug:panelstudio-mc12:0.1.8')
     compile group: 'net.jodah', name: 'typetools', version: '0.6.3'
     compile group: "com.googlecode.json-simple", name: "json-simple", version: "1.1.1"
     compile group: 'club.minnced', name: 'java-discord-rpc', version: '2.0.1'
@@ -106,7 +101,6 @@ dependencies {
     compile(group: 'org.reflections', name: 'reflections', version: '0.9.11') {
         exclude group: 'com.google.guava', module: 'guava'
     }
-    compile group: 'org.beykery', name: 'neuroph', version: '2.92'
     shade 'com.neovisionaries:nv-websocket-client:2.14'
 
     compile group: 'org.apache.httpcomponents', name: 'httpasyncclient', version: '4.1.4'
@@ -160,7 +154,7 @@ jar {
                 'tweakClass': 'org.spongepowered.asm.launch.MixinTweaker',
                 'TweakOrder': 0,
                 'FMLCorePluginContainsFMLMod': 'true',
-                'FMLCorePlugin': 'com.kisman.cc.mixin.KismanMixinLoader',//com.kisman.cc.mixin.KismanMixinLoader
+                'FMLCorePlugin': 'com.kisman.cc.mixin.KismanMixinLoader',
                 'ForceLoadAsMod': 'true',
                 'FMLAT': 'kisman_at.cfg'
         )
