@@ -48,9 +48,9 @@ import java.nio.file.*;
 import java.util.HashMap;
 
 public class Kisman {
-    public static final String NAME = "kisman.cc free";
+    public static final String NAME = "LavaHack Public";
     public static final String MODID = "kisman";
-    public static final String VERSION = "b1";
+    public static final String VERSION = "b0.1.6.5-1";
     public static final String HWIDS_LIST = "https://pastebin.com/raw/yM7s0G4u";
     public static final String fileName = "kisman.cc/";
     public static final String moduleName = "Modules/";
@@ -67,14 +67,10 @@ public class Kisman {
 
     public static EntityPlayer target_by_click = null;
 
-    public static boolean allowToConfiguredAnotherClients, remapped = false;
+    public static boolean allowToConfiguredAnotherClients = true, remapped = false;
     public static boolean isOpenAuthGui;
     public static boolean canUseImprAstolfo = false;
     public static boolean canInitializateCatLua = true;
-
-    static {
-        allowToConfiguredAnotherClients = HWID.getHWID().equals("42d17b8fbbd970b9f4db02f9a65fca3b");
-    }
 
     public boolean init = false;
 
