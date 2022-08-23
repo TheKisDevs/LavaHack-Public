@@ -1,6 +1,6 @@
 # LavaHack-Public
 
-_KotoPushka_#9042 is developer of public version 
+\_KotoPushka_#9042 is developer of public version 
 
 
 
