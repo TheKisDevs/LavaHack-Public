@@ -1,7 +1,6 @@
 package com.kisman.cc.module.combat;
 
 import com.kisman.cc.Kisman;
-import com.kisman.cc.ai.autorer.AutoRerAI;
 import com.kisman.cc.event.events.*;
 import com.kisman.cc.event.events.lua.EventRender3D;
 import com.kisman.cc.friend.FriendManager;
@@ -63,7 +62,6 @@ public class AutoRer extends Module {
     public final Setting syns = new Setting("Syns", this, true);
     private final Setting rotate = new Setting("Rotate", this, Rotate.Place);
     private final Setting rotateMode = new Setting("Rotate Mode", this, RotateMode.Silent).setVisible(() -> !rotate.checkValString("None"));
-    private final Setting ai = new Setting("AI", this, false);
     private final Setting calcDistSort = new Setting("Calc Dist Sort", this, false);
 
     private final Setting placeLine = new Setting("PlaceLine", this, "Place");
@@ -767,12 +765,6 @@ public class AutoRer extends Module {
         placeTimer.reset();
 
         renderPos = placePos;
-
-        if(ai.getValBoolean()) {
-            float targetDamage = CrystalUtils.calculateDamage(mc.world, placePos.getBlockPos().getX() + 0.5, placePos.getBlockPos().getY() + 1, placePos.getBlockPos().getZ() + 0.5, currentTarget, terrain.getValBoolean());
-            float selfDamage = CrystalUtils.calculateDamage(mc.world, placePos.getBlockPos().getX() + 0.5, placePos.getBlockPos().getY() + 1, placePos.getBlockPos().getZ() + 0.5, mc.player, terrain.getValBoolean());
-            AutoRerAI.collect(placePos.getBlockPos(), targetDamage, selfDamage);
-        }
 
         if((rotate.getValString().equalsIgnoreCase("Place") || rotate.getValString().equalsIgnoreCase("All")) && rotateMode.getValString().equalsIgnoreCase("Silent")) {
             mc.player.rotationYaw = oldRots[0];
