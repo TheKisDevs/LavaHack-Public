@@ -2,7 +2,6 @@ package com.kisman.cc.module.combat;
 
 import com.kisman.cc.Kisman;
 import com.kisman.cc.event.events.*;
-import com.kisman.cc.event.events.lua.EventRender3D;
 import com.kisman.cc.friend.FriendManager;
 import com.kisman.cc.module.*;
 import com.kisman.cc.gui.csgo.components.Slider;
@@ -18,7 +17,6 @@ import com.kisman.cc.util.bypasses.SilentSwitchBypass;
 import com.kisman.cc.util.enums.ShaderModes;
 import i.gishreloaded.gishcode.utils.TimerUtils;
 import i.gishreloaded.gishcode.utils.visual.ChatUtils;
-import me.zero.alpine.listener.*;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.item.EntityEnderCrystal;
@@ -28,6 +26,9 @@ import net.minecraft.network.play.client.*;
 import net.minecraft.network.play.server.*;
 import net.minecraft.util.*;
 import net.minecraft.util.math.*;
+
+import net.minecraftforge.client.event.RenderWorldLastEvent;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 import java.util.*;
 import java.util.List;
@@ -184,7 +185,6 @@ public class AutoRer extends Module {
         setmgr.rSetting(syns);
         setmgr.rSetting(rotate);
         setmgr.rSetting(rotateMode);
-//        setmgr.rSetting(ai);
         setmgr.rSetting(calcDistSort);
 
         setmgr.rSetting(placeLine);
@@ -255,6 +255,7 @@ public class AutoRer extends Module {
     }
 
     public void onEnable() {
+        super.onEnable();
         renderer.reset();
         placedList.clear();
         breakTimer.reset();
@@ -271,17 +272,16 @@ public class AutoRer extends Module {
         Kisman.EVENT_BUS.subscribe(listener);
         Kisman.EVENT_BUS.subscribe(listener1);
         Kisman.EVENT_BUS.subscribe(motion);
-        Kisman.EVENT_BUS.subscribe(render3d);
 
         subscribed = true;
     }
 
     public void onDisable() {
+        super.onDisable();
         if(subscribed) {
             Kisman.EVENT_BUS.unsubscribe(listener);
             Kisman.EVENT_BUS.unsubscribe(listener1);
             Kisman.EVENT_BUS.unsubscribe(motion);
-            Kisman.EVENT_BUS.unsubscribe(render3d);
         }
 
         if(thread != null) shouldInterrupt.set(false);
@@ -420,8 +420,8 @@ public class AutoRer extends Module {
         }
     }
 
-    @EventHandler
-    private final Listener<EventRender3D> render3d = new Listener<>(event -> {
+    @SubscribeEvent
+    public void onRenderWorld(RenderWorldLastEvent event) {
         if(targetCharms.getValBoolean()) {
             if(currentTarget != null) {
                 try {
@@ -544,7 +544,7 @@ public class AutoRer extends Module {
                             ((OutlineShader) framebufferShader).radius = targetCharmsRadius.getValFloat();
                             ((OutlineShader) framebufferShader).quality = targetCharmsQuality.getValFloat();
                         }
-                        framebufferShader.startDraw(event.particalTicks);
+                        framebufferShader.startDraw(event.getParticalTicks());
                         for (Entity entity : mc.world.loadedEntityList) {
                             if (entity == mc.player || entity == mc.getRenderViewEntity() || !entity.equals(currentTarget)) continue;
                             Vec3d vector = MathUtil.getInterpolatedRenderPos(entity, event.particalTicks);
@@ -568,7 +568,7 @@ public class AutoRer extends Module {
         }
 
         if(render.getValBoolean()) if(placePos != null) renderer.onRenderWorld(movingLength.getValFloat(), fadeLength.getValFloat(), renderer_, placePos, text.getValBoolean());
-    });
+    }
 
     private void attackCrystalPredict(int entityID, BlockPos pos) {
         if(instantRotate.getValBoolean() && !motionCrystal.getValBoolean() && (rotate.getValString().equalsIgnoreCase("Break") || rotate.getValString().equalsIgnoreCase("All"))) {
