@@ -2,7 +2,6 @@ package com.kisman.cc.module.combat.autorer.util
 
 import net.minecraft.client.Minecraft
 import net.minecraft.client.gui.ScaledResolution
-import net.minecraft.client.renderer.ActiveRenderInfo
 import net.minecraft.client.renderer.GLAllocation
 import net.minecraft.client.renderer.Matrix4f
 import net.minecraft.util.math.Vec3d
