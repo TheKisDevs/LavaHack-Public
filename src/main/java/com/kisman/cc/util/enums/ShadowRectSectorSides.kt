@@ -1,7 +1,6 @@
 package com.kisman.cc.util.enums
 
 import com.kisman.cc.util.render.objects.CornerObject
-import com.sun.javafx.geom.Vec2d
 
 enum class ShadowRectSectorSides(
     val parentSides: List<RectSides>,
@@ -19,11 +18,6 @@ enum class ShadowRectSectorSides(
                 if(sectorSide.parentSides.contains(side)) list = list + sectorSide
             }
             return list
-        }
-
-        fun getRenderPos(start : Vec2d, end : Vec2d, side : ShadowRectSectorSides) : Vec2d? {
-            val corner = side.corner
-            return if(corner.corner1 == 0) start else if(corner.corner1 == 90) Vec2d(end.x, start.y) else if(corner.corner1 == 180) end else if(corner.corner1 == 270) Vec2d(start.x, end.y) else null
         }
     }
 }

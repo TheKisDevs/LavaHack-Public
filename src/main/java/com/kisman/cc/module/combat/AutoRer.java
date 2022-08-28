@@ -17,6 +17,8 @@ import com.kisman.cc.util.bypasses.SilentSwitchBypass;
 import com.kisman.cc.util.enums.ShaderModes;
 import i.gishreloaded.gishcode.utils.TimerUtils;
 import i.gishreloaded.gishcode.utils.visual.ChatUtils;
+import me.zero.alpine.listener.EventHandler;
+import me.zero.alpine.listener.Listener;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.item.EntityEnderCrystal;
@@ -544,11 +546,11 @@ public class AutoRer extends Module {
                             ((OutlineShader) framebufferShader).radius = targetCharmsRadius.getValFloat();
                             ((OutlineShader) framebufferShader).quality = targetCharmsQuality.getValFloat();
                         }
-                        framebufferShader.startDraw(event.getParticalTicks());
+                        framebufferShader.startDraw(event.getPartialTicks());
                         for (Entity entity : mc.world.loadedEntityList) {
                             if (entity == mc.player || entity == mc.getRenderViewEntity() || !entity.equals(currentTarget)) continue;
-                            Vec3d vector = MathUtil.getInterpolatedRenderPos(entity, event.particalTicks);
-                            Objects.requireNonNull(mc.getRenderManager().getEntityRenderObject(entity)).doRender(entity, vector.x, vector.y, vector.z, entity.rotationYaw, event.particalTicks);
+                            Vec3d vector = MathUtil.getInterpolatedRenderPos(entity, event.getPartialTicks());
+                            Objects.requireNonNull(mc.getRenderManager().getEntityRenderObject(entity)).doRender(entity, vector.x, vector.y, vector.z, entity.rotationYaw, event.getPartialTicks());
                         }
                         framebufferShader.stopDraw();
                         if (gradient) ((GradientOutlineShader) framebufferShader).update(targetCharmsSpeedOutline.getValDouble());

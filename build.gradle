@@ -1,41 +1,38 @@
-ext.kotlin_version = '1.3.50'
-ext.annotations_version = '16.0.3'
-ext.coroutines_version = '1.3.1'
 buildscript {
     repositories {
         mavenCentral()
-        jcenter()
         maven {
-            url = "http://files.minecraftforge.net/maven"
+            name = 'forge'
+            url = 'https://files.minecraftforge.net/maven'
         }
         maven {
-            name = 'gradle plugins'
-            url "https://plugins.gradle.org/m2/"
+            name = 'spongepowered-repo'
+            url = 'https://repo.spongepowered.org/maven'
         }
         maven {
-            name = 'SpongePowered'
-            url = 'https://repo.spongepowered.org/repository/maven-public/'
-        }
-        maven {
-            name = 'sonatype'
-            url = 'https://oss.sonatype.org/content/repositories/snapshots/'
+            name = 'jitpack.io'
+            url = 'https://jitpack.io'
         }
     }
     dependencies {
         classpath 'net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT'
-        classpath 'org.spongepowered:mixingradle:0.4-SNAPSHOT'
-        classpath 'com.github.jengelman.gradle.plugins:shadow:1.2.3'
+        classpath 'org.spongepowered:mixingradle:0.6-SNAPSHOT'
+        classpath 'com.github.jengelman.gradle.plugins:shadow:4.0.4'
         classpath 'com.google.code.gson:gson:2.8.6'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
 
-apply plugin: 'kotlin'
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.3.50'
+}
+
+ext.kotlin_version = '1.3.50'
+ext.annotations_version = '16.0.3'
+ext.coroutines_version = '1.3.1'
+
 apply plugin: 'com.github.johnrengelman.shadow'
 apply plugin: 'net.minecraftforge.gradle.forge'
 apply plugin: 'org.spongepowered.mixin'
-apply plugin: 'eclipse'
-apply plugin: 'maven-publish'
 
 version = 'b0.1.6.5-1'
 group = 'com.kisman.cc'
@@ -43,15 +40,14 @@ archivesBaseName = 'LavaHack-Public'
 
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
 
-compileJava.options.encoding = 'UTF-8'
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
 
 minecraft {
-    version = "1.12.2-14.23.5.2768"
-    runDir = "run"
-    mappings = "snapshot_20171003"
+    version = '1.12.2-14.23.5.2768'
+    mappings = 'snapshot_20171003'
+    runDir = 'run'
 }
 
 repositories {
@@ -65,21 +61,16 @@ repositories {
     }
     maven {
         name = 'swt-repo'
-        url = "http://maven-eclipse.github.io/maven"
+        url = 'http://maven-eclipse.github.io/maven'
     }
     maven {
-        name = "jitpack.io"
-        url = "https://jitpack.io"
-    }
-    maven {
-        name = 'lukflug'
-        url = 'https://lukflug.github.io/maven'
+        name = 'jitpack.io'
+        url = 'https://jitpack.io'
     }
     maven {
         url = 'https://repo.viaversion.com'
     }
     mavenCentral()
-    jcenter()
 }
 
 configurations {
@@ -126,13 +117,16 @@ dependencies {
 processResources {
     inputs.property 'version', project.version
     inputs.property 'mcversion', project.minecraft.version
+
     from(sourceSets.main.resources.srcDirs) {
         include 'mcmod.info'
         expand 'version': project.version, 'mcversion': project.minecraft.version
     }
+
     from(sourceSets.main.resources.srcDirs) {
         exclude 'mcmod.info'
     }
+
     rename '(.+_at.cfg)', 'META-INF/$1'
 }
 
@@ -197,11 +191,13 @@ shadowJar {
 }
 
 build.dependsOn(shadowJar)
+
 compileKotlin {
     kotlinOptions {
         jvmTarget = "1.8"
     }
 }
+
 compileTestKotlin {
     kotlinOptions {
         jvmTarget = "1.8"

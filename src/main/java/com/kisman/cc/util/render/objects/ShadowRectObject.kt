@@ -2,10 +2,8 @@ package com.kisman.cc.util.render.objects
 
 import com.kisman.cc.util.Colour
 import com.kisman.cc.util.Render2DUtil
-import com.kisman.cc.util.Render2DUtilKt
 import com.kisman.cc.util.enums.RectSides
 import com.kisman.cc.util.enums.ShadowRectSectorSides
-import com.sun.javafx.geom.Vec2d
 
 class ShadowRectObject(
     val x1: Double,
