@@ -34,7 +34,7 @@ apply plugin: 'com.github.johnrengelman.shadow'
 apply plugin: 'net.minecraftforge.gradle.forge'
 apply plugin: 'org.spongepowered.mixin'
 
-version = 'b0.1.6.5-1'
+version = 'b1.1'
 group = 'com.kisman.cc'
 archivesBaseName = 'LavaHack-Public'
 
