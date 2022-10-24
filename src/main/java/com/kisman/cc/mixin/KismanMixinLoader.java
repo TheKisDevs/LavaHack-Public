@@ -16,7 +16,7 @@ public class KismanMixinLoader implements IFMLLoadingPlugin {
 
     public KismanMixinLoader(){
         MixinBootstrap.init();
-        Mixins.addConfiguration("mixins.Kisman.json");
+        Mixins.addConfiguration("mixins.kisman.json");
         MixinEnvironment.getDefaultEnvironment().setObfuscationContext("searge");
     }
 
@@ -39,7 +39,7 @@ public class KismanMixinLoader implements IFMLLoadingPlugin {
     @Override
     public void injectData(Map<String, Object> data){
         MixinBootstrap.init();
-        Mixins.addConfiguration("mixins.Kisman.json");
+        Mixins.addConfiguration("mixins.kisman.json");
         MixinEnvironment.getDefaultEnvironment().setObfuscationContext("searge");
     }
 
