@@ -14,8 +14,6 @@ public class DiscordRPCModule extends Module {
         instance = this;
 
         setmgr.rSetting(impr);
-
-        super.setToggled(true);
     }
 
     public void onEnable() {RPC.startRPC();}
