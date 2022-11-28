@@ -1,6 +1,8 @@
 # LavaHack-Public
 
-**DOWNLOAD FROM ACTIONS/СКАЖИВАТЬ ИХ ЭКШЕНОВ**
+**DOWNLOAD FROM ACTIONS/СКАЖИВАТЬ ИЗ ЭКШЕНОВ**
+
+**SHADERCHARMS WILL GIVE YOU CRASH ON MACOS OR LINUX/ШЕЙДЕРЧАМСЫ КРАШНУЛ НА МАКЕ ИЛИ ЛИНУКСЕ**
 
 \_KotoPushka_#9042 is developer of public version 
 
