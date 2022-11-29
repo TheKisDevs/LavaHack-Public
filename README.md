@@ -1,5 +1,7 @@
 # LavaHack-Public
 
+**DOES NOT WORK WITH FUTURE/НЕ РАБОТАЕТ С ФЬЮЧЕРОМ**
+
 **DOWNLOAD FROM ACTIONS/СКАЖИВАТЬ ИЗ ЭКШЕНОВ**
 
 **SHADERCHARMS WILL GIVE YOU CRASH ON MACOS OR LINUX/ШЕЙДЕРЧАМСЫ КРАШНУЛ НА МАКЕ ИЛИ ЛИНУКСЕ**
