@@ -6,7 +6,7 @@
 
 **SHADERCHARMS WILL GIVE YOU CRASH ON MACOS OR LINUX/ШЕЙДЕРЧАМСЫ КРАШНУЛ НА МАКЕ ИЛИ ЛИНУКСЕ**
 
-\_KotoPushka_#9042 is developer of public version 
+\_Online_#8128 is developer of public version 
 
 Public(leaked) version of LavaHack(kisman.cc)
 
