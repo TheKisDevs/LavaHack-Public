@@ -14,7 +14,11 @@ Date of the leak is 05-01-2022
 
 Публичная(слитая) версия ЛаваХака(кисман.цц)
 
-LIST UPDATE:
+LIST UPDATE(Fixed or add):
+[+]FreeCamRewrite
+[+]KillAuraRewrite
+[+]Speed(RW)
+[-]FreeCam
 
 
 Дата слива 05-01-2022
