@@ -50,20 +50,20 @@ public class FreeCam
         FreeCam.mc.world.addEntityToWorld(-69, fakePlayer);
         Kisman.EVENT_BUS.subscribe(listener1);
         Kisman.EVENT_BUS.subscribe(listener2);
+        super.onEnable();
         if (FreeCam.mc.player == null || FreeCam.mc.world == null || FreeCam.mc.player.ticksExisted < 1) {
             if (this.autoTeleportDisable.getValBoolean()) {
                 this.toggle();
-                Kisman.EVENT_BUS.unsubscribe(listener1);
-                Kisman.EVENT_BUS.unsubscribe(listener2);
-
             }
             return;
         }
-        super.onEnable();
     }
 
     @Override
     public void onDisable() {
+        Kisman.EVENT_BUS.unsubscribe(listener1);
+        Kisman.EVENT_BUS.unsubscribe(listener2);
+            
         if (this.clipOnDisable.getValBoolean()) {
             this.oldX = FreeCam.mc.player.posX;
             this.oldY = FreeCam.mc.player.posY;
@@ -77,16 +77,13 @@ public class FreeCam
         FreeCam.mc.player.setPositionAndRotation(this.oldX, this.oldY, this.oldZ, FreeCam.mc.player.rotationYaw, FreeCam.mc.player.rotationPitch);
         Kisman.EVENT_BUS.unsubscribe(listener1);
         Kisman.EVENT_BUS.unsubscribe(listener2);
+        super.onDisable();
         if (FreeCam.mc.player == null || FreeCam.mc.world == null || FreeCam.mc.player.ticksExisted < 1) {
             if (this.autoTeleportDisable.getValBoolean()) {
                 this.toggle();
-                Kisman.EVENT_BUS.unsubscribe(listener1);
-                Kisman.EVENT_BUS.unsubscribe(listener2);
-
             }
             return;
         }
-        super.onDisable();
     }
 
     @EventHandler
