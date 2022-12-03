@@ -1,6 +1,6 @@
 # LavaHack-Public
 
-\reyZ#0861 is the developer of public version 
+reyZ#0861 is the developer of public version 
 
 Public(leaked) version of LavaHack(kisman.cc)
 
@@ -12,10 +12,11 @@ Date of the leak is 05-01-2022
 
 ## Changes:
 
-[+] FreeCam
+[+] Added FreeCam
 
-[+] KillAuraRewrite(next upd.)
-[-] FreeCamByPass
+[+] Added JesusPlus
+
+[/] Fixed mixin issues
 
 ## Usage Note:
 
