@@ -170,7 +170,7 @@ public class ModuleManager {
 		modules.add(new FastLadder());
 		modules.add(new FastPlace());
 		modules.add(new ForgeBypass());
-		modules.add(new FreeCamBypass());
+		modules.add(new FreeCam());
 		modules.add(new NoInteract());
 		modules.add(new PacketCancel());
 		modules.add(new PacketLogger());
