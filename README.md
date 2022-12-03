@@ -18,6 +18,8 @@ Date of the leak is 05-01-2022
 
 [/] Fixed mixin issues
 
+[-] Removed FreeCamBypass
+
 ## Usage Note:
 
 **DOES NOT WORK WITH FUTURE/НЕ РАБОТАЕТ С ФЬЮЧЕРОМ**
