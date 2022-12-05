@@ -22,6 +22,8 @@ Date of the leak is 05-01-2022
 
 ## Usage Note:
 
+**If you have crashes, you should try with mixinbooter/Если у вас есть краши то попробуйте с mixinbooter'ом**
+
 **DOES NOT WORK WITH FUTURE/НЕ РАБОТАЕТ С ФЬЮЧЕРОМ**
 
 **DOWNLOAD FROM ACTIONS/СКАЖИВАТЬ ИЗ ЭКШЕНОВ**
