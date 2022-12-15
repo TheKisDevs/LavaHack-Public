@@ -14,7 +14,7 @@ import java.util.*;
 public class CommandManager {
     public static ArrayList<Command> commands = new ArrayList<Command>();
 	
-	public char cmdPrefix = '-';
+	public char cmdPrefix = '~';
 	public String cmdPrefixStr = "" + cmdPrefix;
 
 	public CommandManager()
