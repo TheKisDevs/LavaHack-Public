@@ -3,7 +3,7 @@
   "minVersion": "0.4-SNAPSHOT",
   "compatibilityLevel": "JAVA_8",
   "package": "com.kisman.cc.mixin.mixins",
-  "refmap": "mixins.kisman.refmap.json",
+  "refmap": "mixins.lavahack-public.refmap.json",
   "mixins": [
     "MixinAbstractClientPlayer",
     "MixinC00Handshake",
