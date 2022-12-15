@@ -16,9 +16,13 @@ Date of the leak is 05-01-2022
 
 [+] Added JesusPlus
 
-[/] Fixed mixin issues
+[~] Fixed mixin issues
+
+[~] Fixed compatibility with normal LavaHack 
 
 [/] Changed directory with configs to `lavahack-public`
+
+[/] Changed chat prefix to `~`
 
 [-] Removed FreeCamBypass
 
