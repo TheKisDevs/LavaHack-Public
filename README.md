@@ -22,7 +22,7 @@ Date of the leak is 05-01-2022
 
 [/] Changed directory with configs to `lavahack-public`
 
-[/] Changed chat prefix to `~`
+[/] Changed chat prefix to `;`
 
 [-] Removed FreeCamBypass
 
