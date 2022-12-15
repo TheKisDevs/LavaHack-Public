@@ -18,6 +18,8 @@ Date of the leak is 05-01-2022
 
 [/] Fixed mixin issues
 
+[/] Changed directory with configs to `lavahack-public`
+
 [-] Removed FreeCamBypass
 
 ## Usage Note:
