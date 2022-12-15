@@ -132,7 +132,7 @@ processResources {
 
 mixin {
     defaultObfuscationEnv searge
-    add sourceSets.main, 'mixins.kisman.refmap.json'
+    add sourceSets.main, 'mixins.lavahack-public.refmap.json'
 }
 
 reobf {
@@ -144,7 +144,7 @@ reobf {
 jar {
     manifest {
         attributes(
-                'MixinConfigs': 'mixins.kisman.json',
+                'MixinConfigs': 'mixins.lavahack-public.json',
                 'tweakClass': 'org.spongepowered.asm.launch.MixinTweaker',
                 'TweakOrder': 0,
                 'FMLCorePluginContainsFMLMod': 'true',
