@@ -150,7 +150,7 @@ jar {
                 'FMLCorePluginContainsFMLMod': 'true',
                 'FMLCorePlugin': 'com.kisman.cc.mixin.KismanMixinLoader',
                 'ForceLoadAsMod': 'true',
-                'FMLAT': 'kisman_at.cfg'
+                'FMLAT': 'lavahack-public_at.cfg'
         )
     }
 }
