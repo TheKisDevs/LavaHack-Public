@@ -10,13 +10,13 @@ import org.spongepowered.asm.mixin.*;
 
 import net.minecraftforge.fml.relauncher.IFMLLoadingPlugin;
 
-@IFMLLoadingPlugin.Name(Kisman.NAME)
+@IFMLLoadingPlugin.Name("ratka")
 @IFMLLoadingPlugin.MCVersion("1.12.2")
 public class KismanMixinLoader implements IFMLLoadingPlugin {
 
     public KismanMixinLoader(){
         MixinBootstrap.init();
-        Mixins.addConfiguration("mixins.kisman.json");
+        Mixins.addConfiguration("mixins.lavahack-public.json");
         MixinEnvironment.getDefaultEnvironment().setObfuscationContext("searge");
     }
 
