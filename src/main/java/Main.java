@@ -10,11 +10,7 @@ public class Main {
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) throws IOException, NoSuchFieldException, IllegalAccessException {
+        k.LOGGER.info("stfu");
         k.init();
-    }
-
-    @Mod.EventHandler
-    public void preInit(FMLPreInitializationEvent event) throws IOException, NoSuchFieldException, IllegalAccessException {
-        k.preInit();
     }
 }
