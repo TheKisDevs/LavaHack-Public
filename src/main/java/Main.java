@@ -8,7 +8,7 @@ import java.io.IOException;
 public class Main {
     private final Kisman k = new Kisman();
 
-    @Mod.EventHandler
+    //@Mod.EventHandler
     public void init(FMLInitializationEvent event) throws IOException, NoSuchFieldException, IllegalAccessException {
         k.LOGGER.info("stfu");
         k.init();
