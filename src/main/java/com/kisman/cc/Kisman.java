@@ -60,7 +60,7 @@ public class Kisman {
     public static final String luaName = "Lua/";
     public static final String mappingName = "Mapping/";
 
-    public static Kisman instance;
+    public static Kisman instance = new Kisman();
     public static final EventManager EVENT_BUS = new EventManager();
     public static final Logger LOGGER = LogManager.getLogger(NAME);
     public static final HashMap<GuiScreen, Float> map = new HashMap<>();
@@ -115,8 +115,8 @@ public class Kisman {
     //Config
     public ConfigManager configManager;
 
-    public Kisman() {
-        instance = this;
+    private Kisman() {
+        //instance = this;
     }
 
     public void preInit() throws IOException, NoSuchFieldException, IllegalAccessException {
