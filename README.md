@@ -18,8 +18,6 @@ Date of the leak is 05-01-2022
 
 [~] Fixed mixin issues
 
-[~] Fixed compatibility with normal LavaHack 
-
 [/] Changed directory with configs to `lavahack-public`
 
 [/] Changed chat prefix to `;`
@@ -35,6 +33,10 @@ Date of the leak is 05-01-2022
 **DOWNLOAD FROM ACTIONS/СКАЖИВАТЬ ИЗ ЭКШЕНОВ**
 
 **SHADERCHARMS WILL GIVE YOU CRASH ON MACOS OR LINUX/ШЕЙДЕРЧАМСЫ КРАШНУЛ НА МАКЕ ИЛИ ЛИНУКСЕ**
+
+**Folder with configs is `.minecraft/lavahack-public` folder**
+
+**VERSION OF MINECRAFT IS 1.12.2**
 
 ## The history of the leak(in russian):
 
