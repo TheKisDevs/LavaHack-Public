@@ -26,7 +26,7 @@ Date of the leak is 05-01-2022
 
 ## Usage Note:
 
-**If you have crashes, you should try with mixinbooter/Если у вас есть краши то попробуйте с mixinbooter'ом**
+**If you have crashes, you should try with `mixinbooter`/Если у вас есть краши то попробуйте с `mixinbooter`'ом**
 
 **DOES NOT WORK WITH FUTURE/НЕ РАБОТАЕТ С ФЬЮЧЕРОМ**
 
@@ -34,9 +34,9 @@ Date of the leak is 05-01-2022
 
 **SHADERCHARMS WILL GIVE YOU CRASH ON MACOS OR LINUX/ШЕЙДЕРЧАМСЫ КРАШНУЛ НА МАКЕ ИЛИ ЛИНУКСЕ**
 
-**Folder with configs is `.minecraft/lavahack-public` folder**
+**Folder with configs is `.minecraft/lavahack-public` folder/Папка с конфигами это `.minecraft/lavahack-public`**
 
-**VERSION OF MINECRAFT IS 1.12.2**
+**VERSION OF MINECRAFT IS `1.12.2`/ВЕРСИЯ МАЙНКРАФТА ЭТО `1.12.2`**
 
 ## The history of the leak(in russian):
 
