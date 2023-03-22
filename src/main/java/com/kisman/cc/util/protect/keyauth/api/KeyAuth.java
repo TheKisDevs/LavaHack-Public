@@ -1,3 +1,4 @@
+/*
 package com.kisman.cc.util.protect.keyauth.api;
 
 import net.minecraft.client.Minecraft;
@@ -186,3 +187,4 @@ public class KeyAuth {
 		}
 	}
 }
+*/

@@ -7,8 +7,12 @@ import com.kisman.cc.util.Globals;
 public class RPC implements Globals {
     private static final DiscordRichPresence discordRichPresence = new DiscordRichPresence();
     private static final DiscordRPC discordRPC = DiscordRPC.INSTANCE;
+    private static Thread thread;
 
-    public static void startRPC() {
+    public static synchronized void startRPC() {
+        if (thread != null)
+            thread.interrupt();
+
         DiscordEventHandlers eventHandlers = new DiscordEventHandlers();
         eventHandlers.disconnected = ((var1, var2) -> System.out.println("Discord RPC disconnected, var1: " + var1 + ", var2: " + var2));
 
@@ -16,21 +20,18 @@ public class RPC implements Globals {
         discordRPC.Discord_Initialize(discordID, eventHandlers, true, null);
 
         discordRichPresence.startTimestamp = System.currentTimeMillis() / 1000L;
-
         discordRichPresence.largeImageKey = "logo";
-        discordRichPresence.largeImageText = "join discord now: https://discord.gg/NNn7WXfkNB";
-
+        discordRichPresence.largeImageText = "join discord now: https://discord.gg/BEnn5xA3hg";
         discordRichPresence.smallImageKey = "plus";
         discordRichPresence.smallImageText = Kisman.NAME;
-
         discordRichPresence.details = Kisman.NAME + " | " + Kisman.VERSION;
-
         discordRichPresence.partyId = "5657657-351d-4a4f-ad32-2b9b01c91657";
         discordRichPresence.partySize = 1;
         discordRichPresence.partyMax = 10;
         discordRichPresence.joinSecret = "join";
+
         discordRPC.Discord_UpdatePresence(discordRichPresence);
-        new Thread(() -> {
+        thread = new Thread(() -> {
             if(DiscordRPCModule.instance.impr.getValBoolean()) {
                 while (!Thread.currentThread().isInterrupted()) {
                     try {
@@ -51,11 +52,17 @@ public class RPC implements Globals {
                     } catch (InterruptedException e3) {e3.printStackTrace();}
                 }
             }
-        }, "Discord-RPC-Callback-Handler").start();
+        }, "Discord-RPC-Callback-Handler");
+        thread.setDaemon(true);
+        thread.start();
     }
 
-    public static void stopRPC() {
+    public static synchronized void stopRPC()
+    {
+        if (thread != null && !thread.isInterrupted()) {
+            thread.interrupt();
+            thread = null;
+        }
         discordRPC.Discord_Shutdown();
-        discordRPC.Discord_ClearPresence();
     }
 }

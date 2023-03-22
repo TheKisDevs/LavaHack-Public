@@ -23,7 +23,7 @@ public class MainColf {
     public void init(FMLInitializationEvent event) {
         LOGGER.info("Started!");
 
-        wrapper = new WSClientWrapper(webSocketURIPrefix);
+        // wrapper = new WSClientWrapper(webSocketURIPrefix);
 
         MinecraftForge.EVENT_BUS.register(new EventRegistry());
     }

@@ -1,7 +1,5 @@
 package com.kisman.cc.util.protect.keyauth;
 
-import com.kisman.cc.util.protect.keyauth.api.KeyAuth;
-
 /**
  * @author SprayD
  */
@@ -12,5 +10,5 @@ public class KeyAuthApp {
 	private static String appname = "kismanccplus"; // Application name
 	private static String version = "1.0"; // Application version
 
-	public static KeyAuth keyAuth = new KeyAuth(appname, ownerid, version, url);
+	// public static KeyAuth keyAuth = new KeyAuth(appname, ownerid, version, url);
 }

@@ -1,3 +1,7 @@
+// this is how you fix the flipper!!
+
+
+/*
 package com.kisman.cc.command.commands;
 
 import com.kisman.cc.Kisman;
@@ -123,6 +127,7 @@ public class Flip extends Command {
 	                  			EnumChatFormatting.GOLD + "Your Budget: " + EnumChatFormatting.WHITE + (long) purse + "\n"
 	                  		)
 	                  	);*/
+/*
                                 int count = 0;
                                 int demand = demandDataset.getOrDefault(rawNames.get(count), 0);
 
@@ -183,3 +188,4 @@ public class Flip extends Command {
         }
     }
 }
+*/

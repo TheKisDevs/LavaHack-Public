@@ -88,23 +88,24 @@ dependencies {
     compile group: 'net.jodah', name: 'typetools', version: '0.6.3'
     compile group: "com.googlecode.json-simple", name: "json-simple", version: "1.1.1"
     compile group: 'club.minnced', name: 'java-discord-rpc', version: '2.0.1'
-    compile group: 'org.yaml', name: 'snakeyaml', version: '1.19'
+    compile group: 'org.yaml', name: 'snakeyaml', version: '2.0'
     compile(group: 'org.reflections', name: 'reflections', version: '0.9.11') {
         exclude group: 'com.google.guava', module: 'guava'
     }
     shade 'com.neovisionaries:nv-websocket-client:2.14'
 
+    /*
     compile group: 'org.apache.httpcomponents', name: 'httpasyncclient', version: '4.1.4'
     compile group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.13'
     compile group: 'org.apache.httpcomponents', name: 'httpcore', version: '4.4.14'
     compile group: 'org.apache.httpcomponents', name: 'httpcore-nio', version: '4.4.14'
     compile group: 'org.apache.httpcomponents', name: 'httpmime', version: '4.5.13'
-    compile group: 'org.json', name: 'json', version: '20210307'
-    compile group: 'com.mashape.unirest', name: 'unirest-java', version: '1.4.9'
+     */
+    compile group: 'org.json', name: 'json', version: '20220320'
     compile group: 'com.viaversion', name: 'viaversion', version: '4.2.2-SNAPSHOT'
     compile group: 'com.viaversion', name: 'viabackwards', version: '4.2.1-SNAPSHOT'
     compile group: "com.sun.net.httpserver", name: "http", version: "20070405"
-    compile group: "org.apache.bcel", name: "bcel", version: "6.5.0"
+    compile group: "org.apache.bcel", name: "bcel", version: '6.6.0'
     compile group: "org.jetbrains.kotlin", name: "kotlin-stdlib", version: "$kotlin_version"
     compile group: "org.jetbrains.kotlin", name: "kotlin-stdlib-jdk7", version: "$kotlin_version"
     compile group: "org.jetbrains.kotlin", name: "kotlin-stdlib-jdk8", version: "$kotlin_version"
@@ -166,13 +167,14 @@ shadowJar {
         include(dependency('org.yaml:snakeyaml'))
         include(dependency('org.reflections:reflections'))
         include(dependency('org.javassist:javassist'))
+        /*
         include(dependency('org.apache.httpcomponents:httpasyncclient'))
         include(dependency('org.apache.httpcomponents:httpclient'))
         include(dependency('org.apache.httpcomponents:httpcore'))
         include(dependency('org.apache.httpcomponents:httpcore-nio'))
         include(dependency('org.apache.httpcomponents:httpmime'))
+         */
         include(dependency('org.json:json'))
-        include(dependency('com.mashape.unirest:unirest-java'))
         include(dependency('com.viaversion:viaversion'))
         include(dependency('com.viaversion:viabackwards'))
         include(dependency('com.sun.net.httpserver:http'))

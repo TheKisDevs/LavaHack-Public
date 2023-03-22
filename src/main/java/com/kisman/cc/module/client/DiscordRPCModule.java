@@ -16,6 +16,11 @@ public class DiscordRPCModule extends Module {
         setmgr.rSetting(impr);
     }
 
-    public void onEnable() {RPC.startRPC();}
-    public void onDisable() {RPC.stopRPC();}
+    public void onEnable() {
+        if (System.getProperty("os.version").toLowerCase().contains("android")) { return; }
+        RPC.startRPC();
+    }
+    public void onDisable() {
+        RPC.stopRPC();
+    }
 }
