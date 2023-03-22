@@ -54,7 +54,7 @@ public class AuthGui extends GuiScreen {
     @Override
     public void initGui() {
         super.initGui();
-        KeyAuthApp.keyAuth.init();
+        // KeyAuthApp.keyAuth.init();
         Keyboard.enableRepeatEvents(true);
         keyField = new GuiTextField(2, Minecraft.getMinecraft().fontRenderer, width / 2 - 70, height / 4 + 50, 140, 22);
         if(key != null && !key.isEmpty()) keyField.setText(key);
@@ -70,11 +70,13 @@ public class AuthGui extends GuiScreen {
                 this.mc.shutdown();
                 break;
             case 1:
+                /*
                 if(KeyAuthApp.keyAuth.license(keyField.getText())) {
                     System.out.println("bebra");
                     Kisman.isOpenAuthGui = false;
                     mc.displayGuiScreen(new GuiMainMenu());
                 }
+                 */
                 statusTime = 50;
                 break;
         }

@@ -1,7 +1,6 @@
 package com.kisman.cc.event;
 
 import com.kisman.cc.Kisman;
-import com.kisman.cc.command.commands.Flip;
 import com.kisman.cc.event.events.*;
 
 import com.kisman.cc.event.events.subscribe.TotemPopEvent;
@@ -151,7 +150,7 @@ public class EventProcessor {
             timer.schedule(new TimerTask() {
                         @Override
                         public void run() {
-                            Flip.flip(mc.player);
+                            // Flip.flip(mc.player);
                         }
                     }, 2000);
         } else ConfigHandler.writeConfig(Configuration.CATEGORY_GENERAL, "Flip", "true");
