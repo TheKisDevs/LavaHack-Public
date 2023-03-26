@@ -18,6 +18,8 @@ Date of the leak is 05-01-2022
 
 [~] Fixed mixin issues
 
+[~] Fixed DiscordRPC for pojav launcher
+
 [/] Changed directory with configs to `lavahack-public`
 
 [/] Changed chat prefix to `;`
