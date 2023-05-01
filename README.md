@@ -11,9 +11,13 @@ that means its pretty old
 
 **If you have crashes, you should try with _mixinbooter_**
 **if that doesnt work Join https://discord.gg/rTRynUbp for help**
+:
 **SHADERCHARMS WILL GIVE YOU CRASH ON MAC(OS) OR LINUX**
+:
 **LAVAHACK PUBLIC DOES NOT WORK WITH FUTURE**
+:
 **Folder with configs is `.minecraft/lavahack-public` folder`**
+:
 **Chat prefix is `;`**
 
 ## How to download
