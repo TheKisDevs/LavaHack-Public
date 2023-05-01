@@ -1,46 +1,27 @@
-# LavaHack-Public
+# LavaHack Public
 
-reyZ#0861 is the developer of public version 
+!!! **the public will not get any updates** !!!
 
-Public(leaked) version of LavaHack(kisman.cc)
+Public (leaked) version of LavaHack(kisman.cc)
 
-Date of the leak is 05-01-2022
+Leak happened mid 2022
+that means its pretty old
 
-Публичная(слитая) версия ЛаваХака(кисман.цц)
+## Problems and usage note's:
 
-Дата слива 05-01-2022
+**If you have crashes, you should try with _mixinbooter_**
+**if that doesnt work Join https://discord.gg/rTRynUbp for help**
+**SHADERCHARMS WILL GIVE YOU CRASH ON MAC(OS) OR LINUX**
+**LAVAHACK PUBLIC DOES NOT WORK WITH FUTURE**
+**Folder with configs is `.minecraft/lavahack-public` folder`**
+**Chat prefix is `;`**
 
-## Changes:
+## How to download
+**firstly download Forge**
+**VERSION OF MINECRAFT IS `1.12.2 - Forge 14.23.5.2860`**
+then go to actions in the top line
 
-[+] Added FreeCam
 
-[+] Added JesusPlus
-
-[~] Fixed mixin issues
-
-[~] Fixed DiscordRPC for pojav launcher
-
-[/] Changed directory with configs to `lavahack-public`
-
-[/] Changed chat prefix to `;`
-
-[-] Removed FreeCamBypass
-
-## Usage Note:
-
-**If you have crashes, you should try with `mixinbooter`/Если у вас есть краши то попробуйте с `mixinbooter`'ом**
-
-**DOES NOT WORK WITH FUTURE/НЕ РАБОТАЕТ С ФЬЮЧЕРОМ**
-
-**DOWNLOAD FROM ACTIONS/СКАЖИВАТЬ ИЗ ЭКШЕНОВ**
-
-**SHADERCHARMS WILL GIVE YOU CRASH ON MACOS OR LINUX/ШЕЙДЕРЧАМСЫ КРАШНУЛ НА МАКЕ ИЛИ ЛИНУКСЕ**
-
-**Folder with configs is `.minecraft/lavahack-public` folder/Папка с конфигами это `.minecraft/lavahack-public`**
-
-**VERSION OF MINECRAFT IS `1.12.2`/ВЕРСИЯ МАЙНКРАФТА ЭТО `1.12.2`**
-
-**Chat prefix is `;`/Префикс в чате это `;`**
 
 ## The History Of The Leak(in russian):
 
