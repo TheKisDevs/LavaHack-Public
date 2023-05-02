@@ -1,47 +1,40 @@
-# LavaHack-Public
+# LavaHack Public
 
-reyZ#0861 is the developer of public version 
+!!! **the public will not get any updates** !!!
 
-Public(leaked) version of LavaHack(kisman.cc)
+Public (leaked) version of LavaHack(kisman.cc)
 
-Date of the leak is 05-01-2022
+Leak happened mid 2022
+that means its pretty old
 
-Публичная(слитая) версия ЛаваХака(кисман.цц)
+## Problems and usage note's:
 
-Дата слива 05-01-2022
+**If you have crashes, you should try with _mixinbooter_**
+**if that doesnt work Join https://discord.gg/rTRynUbp for help**
 
-## Changes:
+SHADERCHARMS WILL GIVE YOU CRASH ON MAC(OS) OR LINUX
 
-[+] Added FreeCam
+LAVAHACK PUBLIC DOES NOT WORK WITH FUTURE
 
-[+] Added JesusPlus
+Folder with configs is `.minecraft/lavahack-public` folder`
 
-[~] Fixed mixin issues
+Chat prefix is `;`
 
-[~] Fixed DiscordRPC for pojav launcher
+## How to download
+**firstly download Forge**
+**version of forge is `1.12.2 - Forge 14.23.5.2860`** download the installer,
+click the installer (the downloaded file) just install forge if you cant search {how to install forge} on youtube
 
-[/] Changed directory with configs to `lavahack-public`
+**then go to actions in the top line**
 
-[/] Changed chat prefix to `;`
+![Screenshot 2023-05-01 161509](https://user-images.githubusercontent.com/120041780/235457506-c5cdaa6c-96bf-48e6-8b01-a7672555c3b6.png)
+**changelooooggg>then press the .jar file and it should start download if you cant do that, create a github account**
 
-[-] Removed FreeCamBypass
+ok soo the file download in a .zip file now if you cant do anything that means you have to install winrar if you havent
+if you did open the .zip file and put the lavahack public.jar file in your mods folder
 
-## Usage Note:
+now go ahead and open the official minecraft laucher and lauch minecraft,
+then go into a server and press Right shift and the gui should open
+## The History Of The Leak:
 
-**If you have crashes, you should try with `mixinbooter`/Если у вас есть краши то попробуйте с `mixinbooter`'ом**
-
-**DOES NOT WORK WITH FUTURE/НЕ РАБОТАЕТ С ФЬЮЧЕРОМ**
-
-**DOWNLOAD FROM ACTIONS/СКАЖИВАТЬ ИЗ ЭКШЕНОВ**
-
-**SHADERCHARMS WILL GIVE YOU CRASH ON MACOS OR LINUX/ШЕЙДЕРЧАМСЫ КРАШНУЛ НА МАКЕ ИЛИ ЛИНУКСЕ**
-
-**Folder with configs is `.minecraft/lavahack-public` folder/Папка с конфигами это `.minecraft/lavahack-public`**
-
-**VERSION OF MINECRAFT IS `1.12.2`/ВЕРСИЯ МАЙНКРАФТА ЭТО `1.12.2`**
-
-**Chat prefix is `;`/Префикс в чате это `;`**
-
-## The History Of The Leak(in russian):
-
-Короче был панкейк он вообще раньше выдавал себя за пендоса xDDD, он девил со мной хак когда был "пендосом", и если честно лучше бы он так и пиздел нам, в итоге когда он нам рассказал про то что он нас наебал(типо как меня тер в своё время), я с ним ещё больше скорешился, я вообще точно не помню но вроде самое главное для хака он сделал когда был "пендосом", кароче вот, всё было охуенно, началась спецоперация, я тратил тонны времени на то что бы с ним(и не только с ним) спорить, он так усердно старался меня переубедить но он проебался короче НАХУЙ это тут надо, ладно, в итоге потом он съебался из украины в другую страну, он мне почти не отвечал, я у него спрашивал, СПЕЦИАЛЬНО писал что я его не тороплю, он всё говорил мол дада вот щас завтра там кароче подобный бред, и в какой то день он решил слить сурс, он меня шантажировал(про это потом), я избежал лика на 1-2 месяца, потом переносимся во время когда я узнаю о новом хаке дазеда больше, и о том что панкейк с ним девит его, потом, у них в дискорде я, масейвр, и ещё некоторые получали мут за то что пиздели языком на русском, а они русский вообще не любят вот прям совсем, короче он меня заебал и я его забанил в дискорде, потом он сливает клиент, ВСЁ!!!!!
+In short, there was a pancake, he generally used to pretend to be a pendos xDDD, he deviled a hack with me when he was a "pendos", and to be honest, it would be better if he fucked us like that, as a result, when he told us that he fucked us (like he rubbed me at one time), I got even more into trouble with him, I don't remember exactly at all, but it seems that he did the most important thing for the hack when he was a "pendos", Everything was fucked up, a special operation began, I spent tons of time arguing with him (and not only with him), he tried so hard to convince me, but he fucked up shorter FUCK it is necessary here, okay,as a result, then he from Ukraine to another country, he almost didn't answer me, I asked him, SPECIFICALLY wrote that I wasn't rushing him, he kept saying dada right now tomorrow there is a kind of nonsense, and on some day he decided to merge the SURS, he blackmailed me (more on that later), I avoided the face for 1-2 months, then we are transported to the time when I learn more about the new hack of Dazed, and that the pancake with him devits him, then, in their discord, I, Maceivr, and some others received a mute for the fact that they made a tongue on the Russian, and they don't like Russian at all at all, in short, he fucked me and I banned him in the discord, then he drains the client
