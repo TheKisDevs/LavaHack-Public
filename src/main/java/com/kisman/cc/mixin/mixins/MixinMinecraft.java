@@ -3,9 +3,7 @@
  import com.kisman.cc.Kisman;
  import com.kisman.cc.mixin.mixins.accessor.*;
  import com.kisman.cc.module.exploit.MultiTask;
- import com.kisman.cc.viaforge.ViaForge;
  import net.minecraft.client.entity.EntityPlayerSP;
- import net.minecraft.client.main.GameConfiguration;
  import net.minecraft.client.multiplayer.PlayerControllerMP;
  import net.minecraft.client.settings.GameSettings;
  import org.spongepowered.asm.mixin.Mixin;
@@ -70,7 +68,4 @@
    if (MultiTask.instance.isToggled() && !player.isHandActive()) ((IEntityPlayerSP) player).mm_setHandActive(mt_handActive);
   }
 
-  @Inject(method = "<init>", at = @At("RETURN"))
-  public void injectConstructor(GameConfiguration p_i45547_1_, CallbackInfo ci) {
-   try {ViaForge.getInstance().start();} catch (Exception e) {Kisman.LOGGER.error("[ViaForge] ViaForge did not loaded! If you need it, restart the client");}}
  }

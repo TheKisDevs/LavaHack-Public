@@ -4,7 +4,6 @@ import com.kisman.cc.Kisman;
 import com.kisman.cc.gui.alts.AltManagerGUI;
 import com.kisman.cc.gui.halq.HalqGui;
 import com.kisman.cc.util.customfont.CustomFontUtil;
-import com.kisman.cc.viaforge.gui.GuiProtocolSelector;
 import i.gishreloaded.gishcode.utils.visual.ColorUtils;
 import net.minecraft.client.gui.*;
 import org.lwjgl.opengl.GL11;
@@ -49,13 +48,10 @@ public class KismanMainMenuGui extends GuiScreen {
                 mc.displayGuiScreen(new HalqGui(this));
                 break;
             case 2:
-                Kisman.openLink("https://discord.gg/GRAbsr6Cf4");
+                Kisman.openLink("https://discord.gg/BEnn5xA3hg");
                 break;
             case 3:
                 Kisman.openLink("https://www.youtube.com/channel/UCWxQLRT9CXqcK6YyiKHrrNw");
-                break;
-            case 4:
-                mc.displayGuiScreen(new GuiProtocolSelector(this));
                 break;
             case 5:
                 mc.displayGuiScreen(new AltManagerGUI(this));

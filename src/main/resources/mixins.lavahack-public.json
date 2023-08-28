@@ -17,7 +17,6 @@
     "MixinGuiContainer",
     "MixinGuiIngame",
     "MixinGuiMainMenu",
-    "MixinGuiMultiplayer",
     "MixinGuiNewChat",
     "MixinGuiScreen",
     "MixinItemBlock",
@@ -48,11 +47,6 @@
     "accessor.AccessorShaderGroup",
     "accessor.ICPacketPlayer",
     "accessor.IEntityPlayerSP",
-    "accessor.ISession",
-    "viaforge.MixinGuiConnecting",
-    "viaforge.MixinGuiDisconnected",
-    "viaforge.MixinGuiScreenAddServer",
-    "viaforge.MixinGuiScreenServerList",
-    "viaforge.MixinNetworkManagerChInit"
+    "accessor.ISession"
   ]
 }

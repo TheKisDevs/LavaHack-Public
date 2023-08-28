@@ -67,9 +67,6 @@ repositories {
         name = 'jitpack.io'
         url = 'https://jitpack.io'
     }
-    maven {
-        url = 'https://repo.viaversion.com'
-    }
     mavenCentral()
 }
 
@@ -102,8 +99,6 @@ dependencies {
     compile group: 'org.apache.httpcomponents', name: 'httpmime', version: '4.5.13'
      */
     compile group: 'org.json', name: 'json', version: '20220320'
-    compile group: 'com.viaversion', name: 'viaversion', version: '4.2.2-SNAPSHOT'
-    compile group: 'com.viaversion', name: 'viabackwards', version: '4.2.1-SNAPSHOT'
     compile group: "com.sun.net.httpserver", name: "http", version: "20070405"
     compile group: "org.apache.bcel", name: "bcel", version: '6.6.0'
     compile group: "org.jetbrains.kotlin", name: "kotlin-stdlib", version: "$kotlin_version"
@@ -175,8 +170,6 @@ shadowJar {
         include(dependency('org.apache.httpcomponents:httpmime'))
          */
         include(dependency('org.json:json'))
-        include(dependency('com.viaversion:viaversion'))
-        include(dependency('com.viaversion:viabackwards'))
         include(dependency('com.sun.net.httpserver:http'))
         include(dependency('org.apache.bcel:bcel:6.5.0'))
         include(dependency("org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"))
